@@ -33,12 +33,12 @@ def decrypt(task):
     if task == 1:
         numbers = str(input("Please enter the numbers you would like to encrypt with Jump-Five: "))
         for num in numbers:
-            encrypted += jump_key[num]
+            encrypted += (jump_key.get(num, num))
         return encrypted 
     elif task == 2:
         numbers = str(input("Please enter the numbers you would like to decrypt with Jump-Five: "))
         for num in numbers:
-            encrypted += jump_key[num]
+            encrypted += (jump_key.get(num, num))
         return encrypted
 
 def main():
